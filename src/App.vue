@@ -40,6 +40,7 @@ body {
   &-block {
     width: 150px;
     height: 150px;
+    cursor: pointer;
   }
 }
 
@@ -69,13 +70,9 @@ body {
   cursor: pointer;
 }
 
-.red { background: #FED6BC; }
-.blue { background: #DEF7FE; }
-.green { background: #C3FBD8; }
-.yellow { background: #FFFADD; }
+.red { background: #FED6BC; &:hover { background: #ffae81; } }
+.blue { background: #DEF7FE; &:hover { background: #b8e4f0; } }
+.green { background: #C3FBD8; &:hover { background: #a5ecc2; } }
+.yellow { background: #FFFADD; &:hover { background: #f6e9b0; } }
 
-// #ffae81
-// #b8e4f0
-// #a5ecc2
-// #f6e9b0
 </style>
