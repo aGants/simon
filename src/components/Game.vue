@@ -10,13 +10,13 @@
       <button class="btn">Старт</button>
       <p>Раунд: <b>{{ round }}</b></p>
       <label class="label">
-        <input type="radio" name='lvl' value='easy' checked class='radio'> Лёгкий
+        <input type="radio" name='lvl' value='easy' class='radio' v-model='lvl'> Лёгкий
       </label>
       <label class="label">
-        <input type="radio" name='lvl' value='medium' class='radio'> Средний
+        <input type="radio" name='lvl' value='medium' class='radio' v-model='lvl'> Средний
       </label>
       <label class="label">
-        <input type="radio" name='lvl' value='hard' class='radio'> Сложный
+        <input type="radio" name='lvl' value='hard' class='radio' v-model='lvl'> Сложный
       </label>
     </div>
   </div>
@@ -28,6 +28,7 @@ export default {
   data() {
     return {
       round: 0,
+      lvl: 'easy',
     }
   }
 }
