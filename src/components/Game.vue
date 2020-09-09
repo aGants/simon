@@ -7,7 +7,7 @@
       <div class="game-block yellow"></div>
     </div>
     <div class="setting">
-      <button class="btn">Старт</button>
+      <button class="btn" @click='Start(lvl)'>Старт</button>
       <p>Раунд: <b>{{ round }}</b></p>
       <label class="label">
         <input type="radio" name='lvl' value='easy' class='radio' v-model='lvl'> Лёгкий
@@ -29,7 +29,20 @@ export default {
     return {
       round: 0,
       lvl: 'easy',
+      series: ['red', 'blue', 'green', 'yellow'],
+      color: ''
     }
+  },
+  methods: {
+    getRandom() {
+      return this.series[Math.floor(Math.random() * 4)];
+    },
+    Start(lvl){
+      this.round+=1;
+      console.log(lvl);
+      this.color = this.getRandom();
+      console.log(this.color)
+    },
   }
 }
 </script>
